@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Bienvenue à l'Iglesia Bautista Misionera De Santiago (IBMS). Église située Calle Progreso 5, Santiago de los Caballeros, République Dominicaine. Messes, communauté, foi et espérance.">
+<title>Iglesia Bautista Misionera De Santiago (IBMS) | Santiago de los Caballeros</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"LocalBusiness","name":"Iglesia Bautista Misionera De Santiago (IBMS)","address":{"@type":"PostalAddress","streetAddress":"Calle Progreso 5, Carretera Tamboril Ponterzuela","addressLocality":"Santiago de los Caballeros","postalCode":"51000","addressCountry":"DO"},"telephone":"+180935031555","email":"iglesia@gmail.com","url":"https://ibms-santiago.netlify.app"}</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+:root{--white:#fff;--sky:#e8f4f8;--blue:#5b9bd5;--gold:#c9a227;--dark:#2c3e50;--bg:var(--white);--text:var(--dark);--card:#f8fbfd;--border:#ddd}
+body.dark{--white:#1a1d21;--sky:#2d3748;--blue:#63b3ed;--gold:#ecc94b;--dark:#e2e8f0;--bg:#1a1d21;--text:#e2e8f0;--card:#2d3748;--border:#4a5568}
+body{font-family:'Open Sans',sans-serif;color:var(--text);line-height:1.6;background:var(--bg);transition:background .3s,color .3s}
+h1,h2{font-family:Roboto,sans-serif;font-weight:700}
+a{color:var(--blue);text-decoration:none;transition:color .2s}
+a:hover{color:var(--gold)}
+
+header{background:var(--white);box-shadow:0 2px 10px rgba(0,0,0,.08);position:sticky;top:0;z-index:100;transition:background .3s}
+body.dark header{background:var(--card);box-shadow:0 2px 10px rgba(0,0,0,.3)}
+nav{max-width:900px;margin:0 auto;padding:1rem 1.5rem;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:.5rem}
+.logo{font-size:1.25rem;font-weight:700;color:var(--blue)}
+.menu{display:flex;gap:1.5rem;list-style:none}
+.menu a{color:var(--text);font-weight:600}
+.menu a:hover{color:var(--gold)}
+#toggle{display:none;background:0;border:0;font-size:1.5rem;cursor:pointer;color:var(--text);padding:.25rem}
+#toggle span{display:block;width:24px;height:2px;background:currentColor;margin:5px 0;transition:.3s}
+#toggle.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px)}
+#toggle.open span:nth-child(2){opacity:0}
+#toggle.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px)}
+.dark-toggle{background:0;border:1px solid var(--border);border-radius:20px;padding:.4rem .8rem;cursor:pointer;color:var(--text);font-size:.85rem;transition:all .3s}
+.dark-toggle:hover{background:var(--sky)}
+
+.hero{background:linear-gradient(135deg,var(--sky) 0%,#d4e8f0 100%);padding:3rem 1.5rem;text-align:center}
+body.dark .hero{background:linear-gradient(135deg,var(--sky) 0%,#1e293b 100%)}
+.hero h1{font-size:clamp(1.75rem,5vw,2.5rem);color:var(--text);margin-bottom:.5rem}
+.hero .slogan{color:var(--blue);font-size:1.1rem;font-weight:600;margin:1rem 0}
+.hero .cross{width:60px;height:80px;margin:1.5rem auto;background:linear-gradient(180deg,var(--gold) 40%,transparent 40%);background-size:20px 100%;background-position:center;opacity:.9}
+
+section{max-width:900px;margin:0 auto;padding:2.5rem 1.5rem;opacity:0;transform:translateY(20px);transition:opacity .6s,transform .6s}
+section.visible{opacity:1;transform:translateY(0)}
+section h2{color:var(--blue);font-size:1.5rem;margin-bottom:1rem;padding-bottom:.5rem;border-bottom:2px solid var(--gold)}
+.presentation p{margin-bottom:1rem;color:var(--text);opacity:.9}
+.map-wrap{border-radius:8px;overflow:hidden;margin-top:1.5rem;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+.map-wrap iframe{width:100%;height:250px;border:0}
+
+table{width:100%;border-collapse:collapse;margin-top:1rem}
+th,td{padding:.75rem;text-align:left;border-bottom:1px solid var(--sky)}
+th{background:var(--sky);color:var(--text);font-weight:600}
+
+.contact-info{background:var(--sky);padding:1.5rem;border-radius:8px;margin:1.5rem 0}
+.contact-info p{margin:.5rem 0;display:flex;align-items:center;gap:.5rem}
+
+form{display:flex;flex-direction:column;gap:1rem;max-width:500px;margin-top:1rem}
+input,textarea{font-family:inherit;font-size:1rem;padding:.75rem;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--text);transition:border-color .2s}
+input.error,textarea.error{border-color:#e53e3e}
+input.valid,textarea.valid{border-color:#38a169}
+.err-msg{color:#e53e3e;font-size:.85rem;margin-top:-.5rem}
+textarea{min-height:120px;resize:vertical}
+.btn{background:var(--blue);color:var(--white)!important;border:0;padding:.9rem 2rem;font-weight:600;cursor:pointer;border-radius:6px;transition:background .2s}
+.btn:hover{background:#4a8bc2}
+
+footer{background:var(--dark);color:var(--white);padding:2rem 1.5rem;margin-top:3rem;text-align:center;transition:background .3s}
+footer a{color:var(--sky)}
+footer .social{margin:1rem 0;display:flex;justify-content:center;gap:1.5rem;font-size:1.2rem}
+footer small{display:block;margin-top:1rem;opacity:.9}
+
+@media(max-width:600px){
+.menu{display:none;flex-direction:column;width:100%;padding:1rem 0}
+.menu.open{display:flex}
+#toggle{display:block}
+nav{flex-wrap:wrap}
+}
+</style>
+</head>
+<body>
+<header>
+<nav>
+<span class="logo">Iglesia Bautista Misionera De Santiago (IBMS)</span>
+<div style="display:flex;align-items:center;gap:.5rem">
+<button class="dark-toggle" id="darkToggle" aria-label="Mode sombre">🌙</button>
+<button id="toggle" aria-label="Menu"><span></span><span></span><span></span></button>
+</div>
+<ul class="menu">
+<li><a href="#accueil">Accueil</a></li>
+<li><a href="#apropos">À Propos</a></li>
+<li><a href="#messes">Messes</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+</header>
+
+<main>
+<section id="accueil" class="hero visible">
+<h1>Bienvenue à l'Iglesia Bautista Misionera De Santiago (IBMS)</h1>
+<div class="cross"></div>
+<p class="slogan">Foi • Communauté • Espérance</p>
+</section>
+
+<section id="apropos">
+<h2>Notre mission</h2>
+<p>L'Iglesia Bautista Misionera De Santiago (IBMS) accueille les fidèles de Santiago de los Caballeros et des environs. Notre communauté s'engage à vivre la foi dans la charité et le partage, au service des plus démunis. Venez nous rejoindre pour célébrer ensemble l'espérance et la paix du Christ.</p>
+<div class="map-wrap">
+<iframe src="https://www.google.com/maps?q=Calle+Progreso+5,+Carretera+Tamboril+Ponterzuela,+51000+Santiago+de+los+Caballeros,+R%C3%A9publique+Dominicaine&output=embed" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="Carte Iglesia Bautista Misionera De Santiago (IBMS)"></iframe>
+</div>
+</section>
+
+<section id="messes">
+<h2>Horaires des Messes</h2>
+<table>
+<thead><tr><th>Jour</th><th>Heure</th></tr></thead>
+<tbody>
+<tr><td>Dimanche</td><td>8h00 • 10h00 • 18h00</td></tr>
+<tr><td>Lundi - Samedi</td><td>7h00</td></tr>
+<tr><td>Jours de fête</td><td>8h00 • 10h00 • 18h00</td></tr>
+</tbody>
+</table>
+</section>
+
+<section id="contact">
+<h2>Adresse & Contact</h2>
+<div class="contact-info">
+<p>📍 Calle Progreso 5, Carretera Tamboril Ponterzuela 51000</p>
+<p>Santiago de los Caballeros, République Dominicaine</p>
+<p>☎️ <a href="tel:+180935031555">35 03 1555</a></p>
+<p>✉️ <a href="mailto:iglesia@gmail.com">iglesia@gmail.com</a></p>
+</div>
+<h2>Nous contacter</h2>
+<form id="form" action="#" method="post" novalidate>
+<div><input type="text" name="nom" placeholder="Votre nom" data-min="2"><span class="err-msg" id="err-nom"></span></div>
+<div><input type="email" name="email" placeholder="Votre email"><span class="err-msg" id="err-email"></span></div>
+<div><textarea name="message" placeholder="Votre message" data-min="10"></textarea><span class="err-msg" id="err-message"></span></div>
+<button type="submit" class="btn">Envoyer</button>
+</form>
+</section>
+</main>
+
+<footer>
+<p>Iglesia Bautista Misionera De Santiago (IBMS) — Calle Progreso 5, Santiago de los Caballeros</p>
+<div class="social">
+<a href="https://wa.me/180935031555" target="_blank" rel="noopener" aria-label="WhatsApp">WhatsApp</a>
+<a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">Facebook</a>
+</div>
+<small>&copy; 2026 Iglesia Bautista Misionera De Santiago (IBMS). Tous droits réservés.</small>
+</footer>
+
+<script>
+(function(){
+var t=document.getElementById('toggle'),m=document.querySelector('.menu'),d=document.getElementById('darkToggle');
+t.onclick=function(){t.classList.toggle('open');m.classList.toggle('open')};
+document.querySelectorAll('.menu a').forEach(function(a){a.onclick=function(e){e.preventDefault();t.classList.remove('open');m.classList.remove('open');var h=document.querySelector(a.getAttribute('href'));if(h)h.scrollIntoView({behavior:'smooth'})}});
+function setDark(v){document.body.classList.toggle('dark',v);d.textContent=v?'☀️':'🌙';localStorage.setItem('dark',v)}
+var dark=localStorage.getItem('dark')==='true';setDark(dark);
+d.onclick=function(){dark=!dark;setDark(dark)};
+var io=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting)e.target.classList.add('visible')})},{threshold:.1,rootMargin:'0px 0px -50px 0px'});
+document.querySelectorAll('section').forEach(function(s){io.observe(s)});
+var f=document.getElementById('form'),err={nom:document.getElementById('err-nom'),email:document.getElementById('err-email'),message:document.getElementById('err-message')};
+f.onsubmit=function(e){e.preventDefault();var n=f.nom,em=f.email,msg=f.message,vld=true;
+document.querySelectorAll('.err-msg').forEach(function(x){x.textContent=''});
+document.querySelectorAll('input,textarea').forEach(function(x){x.classList.remove('error','valid')});
+if(!n.value.trim()||(n.dataset.min&&n.value.trim().length<+n.dataset.min)){err.nom.textContent='Nom requis (min. 2 caractères)';n.classList.add('error');vld=false}else n.classList.add('valid');
+var re=/^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+if(!em.value.trim()){err.email.textContent='Email requis';em.classList.add('error');vld=false}else if(!re.test(em.value)){err.email.textContent='Email invalide';em.classList.add('error');vld=false}else em.classList.add('valid');
+if(!msg.value.trim()||(msg.dataset.min&&msg.value.trim().length<+msg.dataset.min)){err.message.textContent='Message requis (min. 10 caractères)';msg.classList.add('error');vld=false}else msg.classList.add('valid');
+if(vld){f.reset();document.querySelectorAll('input,textarea').forEach(function(x){x.classList.remove('valid')});alert('Formulaire valide ! Envoi désactivé pour démo.')}
+};
+})();
+</script>
+</body>
+</html>
